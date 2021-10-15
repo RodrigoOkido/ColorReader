@@ -196,8 +196,8 @@ class ViewController: UIViewController {
             systemCyanButton.layer.borderWidth = 0
         case 3:
             systemRedButton.layer.borderWidth = 0
-            systemYellowButton.layer.borderWidth = 0
-            systemOrangeButton.layer.borderWidth = 1
+            systemOrangeButton.layer.borderWidth = 0
+            systemYellowButton.layer.borderWidth = 1
             systemGreenButton.layer.borderWidth = 0
             systemTealButton.layer.borderWidth = 0
             systemBlueButton.layer.borderWidth = 0
