@@ -11,6 +11,7 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var colorName: UILabel!
     @IBOutlet weak var previewColor: UIView!
+    @IBOutlet weak var colorInfo: UIView!
     @IBOutlet weak var systemRedButton: UIButton!
     @IBOutlet weak var systemYellowButton: UIButton!
     @IBOutlet weak var systemOrangeButton: UIButton!
@@ -61,6 +62,7 @@ class ViewController: UIViewController {
         
         switch sender.tag {
         case 1:
+            setColorHighlighted(1)
             colorName.text = "systemRed"
             hexNumber.text = "FF3B30"
             redNumber.text = "255"
@@ -68,6 +70,7 @@ class ViewController: UIViewController {
             blueNumber.text = "48"
             previewColor.backgroundColor = systemRedButton.backgroundColor
         case 2:
+            setColorHighlighted(2)
             colorName.text = "systemOrange"
             hexNumber.text = "FF9500"
             redNumber.text = "255"
@@ -75,6 +78,7 @@ class ViewController: UIViewController {
             blueNumber.text = "0"
             previewColor.backgroundColor = systemOrangeButton.backgroundColor
         case 3:
+            setColorHighlighted(3)
             colorName.text = "systemYellow"
             hexNumber.text = "FFCC00"
             redNumber.text = "255"
@@ -82,6 +86,7 @@ class ViewController: UIViewController {
             blueNumber.text = "0"
             previewColor.backgroundColor = systemYellowButton.backgroundColor
         case 4:
+            setColorHighlighted(4)
             colorName.text = "systemGreen"
             hexNumber.text = "34C759"
             redNumber.text = "52"
@@ -89,6 +94,7 @@ class ViewController: UIViewController {
             blueNumber.text = "89"
             previewColor.backgroundColor = systemGreenButton.backgroundColor
         case 5:
+            setColorHighlighted(5)
             colorName.text = "systemRed"
             hexNumber.text = "30B0C7"
             redNumber.text = "48"
@@ -96,6 +102,7 @@ class ViewController: UIViewController {
             blueNumber.text = "199"
             previewColor.backgroundColor = systemTealButton.backgroundColor
         case 6:
+            setColorHighlighted(6)
             colorName.text = "systemBlue"
             hexNumber.text = "007AFF"
             redNumber.text = "0"
@@ -103,6 +110,7 @@ class ViewController: UIViewController {
             blueNumber.text = "255"
             previewColor.backgroundColor = systemBlueButton.backgroundColor
         case 7:
+            setColorHighlighted(7)
             colorName.text = "systemIndigo"
             hexNumber.text = "5856D6"
             redNumber.text = "88"
@@ -110,6 +118,7 @@ class ViewController: UIViewController {
             blueNumber.text = "214"
             previewColor.backgroundColor = systemIndigoButton.backgroundColor
         case 8:
+            setColorHighlighted(8)
             colorName.text = "systemPurple"
             hexNumber.text = "AF52DE"
             redNumber.text = "175"
@@ -117,6 +126,7 @@ class ViewController: UIViewController {
             blueNumber.text = "222"
             previewColor.backgroundColor = systemPurpleButton.backgroundColor
         case 9:
+            setColorHighlighted(9)
             colorName.text = "systemPink"
             hexNumber.text = "FF2D55"
             redNumber.text = "255"
@@ -124,6 +134,7 @@ class ViewController: UIViewController {
             blueNumber.text = "85"
             previewColor.backgroundColor = systemPinkButton.backgroundColor
         case 10:
+            setColorHighlighted(10)
             colorName.text = "systemBrown"
             hexNumber.text = "A2845E"
             redNumber.text = "162"
@@ -131,6 +142,7 @@ class ViewController: UIViewController {
             blueNumber.text = "94"
             previewColor.backgroundColor = systemBrownButton.backgroundColor
         case 11:
+            setColorHighlighted(11)
             colorName.text = "systemMint"
             hexNumber.text = "00C7BE"
             redNumber.text = "0"
@@ -138,6 +150,7 @@ class ViewController: UIViewController {
             blueNumber.text = "190"
             previewColor.backgroundColor = systemMintButton.backgroundColor
         case 12:
+            setColorHighlighted(12)
             colorName.text = "systemCyan"
             hexNumber.text = "32ADE6"
             redNumber.text = "50"
@@ -153,61 +166,236 @@ class ViewController: UIViewController {
     }
     
     
+    func setColorHighlighted(_ sender: Int) {
+        switch sender {
+        case 1:
+            systemRedButton.layer.borderWidth = 1
+            systemOrangeButton.layer.borderWidth = 0
+            systemYellowButton.layer.borderWidth = 0
+            systemGreenButton.layer.borderWidth = 0
+            systemTealButton.layer.borderWidth = 0
+            systemBlueButton.layer.borderWidth = 0
+            systemIndigoButton.layer.borderWidth = 0
+            systemPurpleButton.layer.borderWidth = 0
+            systemPinkButton.layer.borderWidth = 0
+            systemBrownButton.layer.borderWidth = 0
+            systemMintButton.layer.borderWidth = 0
+            systemCyanButton.layer.borderWidth = 0
+        case 2:
+            systemRedButton.layer.borderWidth = 0
+            systemOrangeButton.layer.borderWidth = 1
+            systemYellowButton.layer.borderWidth = 0
+            systemGreenButton.layer.borderWidth = 0
+            systemTealButton.layer.borderWidth = 0
+            systemBlueButton.layer.borderWidth = 0
+            systemIndigoButton.layer.borderWidth = 0
+            systemPurpleButton.layer.borderWidth = 0
+            systemPinkButton.layer.borderWidth = 0
+            systemBrownButton.layer.borderWidth = 0
+            systemMintButton.layer.borderWidth = 0
+            systemCyanButton.layer.borderWidth = 0
+        case 3:
+            systemRedButton.layer.borderWidth = 0
+            systemYellowButton.layer.borderWidth = 0
+            systemOrangeButton.layer.borderWidth = 1
+            systemGreenButton.layer.borderWidth = 0
+            systemTealButton.layer.borderWidth = 0
+            systemBlueButton.layer.borderWidth = 0
+            systemIndigoButton.layer.borderWidth = 0
+            systemPurpleButton.layer.borderWidth = 0
+            systemPinkButton.layer.borderWidth = 0
+            systemBrownButton.layer.borderWidth = 0
+            systemMintButton.layer.borderWidth = 0
+            systemCyanButton.layer.borderWidth = 0
+        case 4:
+            systemRedButton.layer.borderWidth = 0
+            systemOrangeButton.layer.borderWidth = 0
+            systemYellowButton.layer.borderWidth = 0
+            systemGreenButton.layer.borderWidth = 1
+            systemTealButton.layer.borderWidth = 0
+            systemBlueButton.layer.borderWidth = 0
+            systemIndigoButton.layer.borderWidth = 0
+            systemPurpleButton.layer.borderWidth = 0
+            systemPinkButton.layer.borderWidth = 0
+            systemBrownButton.layer.borderWidth = 0
+            systemMintButton.layer.borderWidth = 0
+            systemCyanButton.layer.borderWidth = 0
+        case 5:
+            systemRedButton.layer.borderWidth = 0
+            systemOrangeButton.layer.borderWidth = 0
+            systemYellowButton.layer.borderWidth = 0
+            systemGreenButton.layer.borderWidth = 0
+            systemTealButton.layer.borderWidth = 1
+            systemBlueButton.layer.borderWidth = 0
+            systemIndigoButton.layer.borderWidth = 0
+            systemPurpleButton.layer.borderWidth = 0
+            systemPinkButton.layer.borderWidth = 0
+            systemBrownButton.layer.borderWidth = 0
+            systemMintButton.layer.borderWidth = 0
+            systemCyanButton.layer.borderWidth = 0
+        case 6:
+            systemRedButton.layer.borderWidth = 0
+            systemOrangeButton.layer.borderWidth = 0
+            systemYellowButton.layer.borderWidth = 0
+            systemGreenButton.layer.borderWidth = 0
+            systemTealButton.layer.borderWidth = 0
+            systemBlueButton.layer.borderWidth = 1
+            systemIndigoButton.layer.borderWidth = 0
+            systemPurpleButton.layer.borderWidth = 0
+            systemPinkButton.layer.borderWidth = 0
+            systemBrownButton.layer.borderWidth = 0
+            systemMintButton.layer.borderWidth = 0
+            systemCyanButton.layer.borderWidth = 0
+        case 7:
+            systemRedButton.layer.borderWidth = 0
+            systemOrangeButton.layer.borderWidth = 0
+            systemYellowButton.layer.borderWidth = 0
+            systemGreenButton.layer.borderWidth = 0
+            systemTealButton.layer.borderWidth = 0
+            systemBlueButton.layer.borderWidth = 0
+            systemIndigoButton.layer.borderWidth = 1
+            systemPurpleButton.layer.borderWidth = 0
+            systemPinkButton.layer.borderWidth = 0
+            systemBrownButton.layer.borderWidth = 0
+            systemMintButton.layer.borderWidth = 0
+            systemCyanButton.layer.borderWidth = 0
+        case 8:
+            systemRedButton.layer.borderWidth = 0
+            systemOrangeButton.layer.borderWidth = 0
+            systemYellowButton.layer.borderWidth = 0
+            systemGreenButton.layer.borderWidth = 0
+            systemTealButton.layer.borderWidth = 0
+            systemBlueButton.layer.borderWidth = 0
+            systemIndigoButton.layer.borderWidth = 0
+            systemPurpleButton.layer.borderWidth = 1
+            systemPinkButton.layer.borderWidth = 0
+            systemBrownButton.layer.borderWidth = 0
+            systemMintButton.layer.borderWidth = 0
+            systemCyanButton.layer.borderWidth = 0
+        case 9:
+            systemRedButton.layer.borderWidth = 0
+            systemOrangeButton.layer.borderWidth = 0
+            systemYellowButton.layer.borderWidth = 0
+            systemGreenButton.layer.borderWidth = 0
+            systemTealButton.layer.borderWidth = 0
+            systemBlueButton.layer.borderWidth = 0
+            systemIndigoButton.layer.borderWidth = 0
+            systemPurpleButton.layer.borderWidth = 0
+            systemPinkButton.layer.borderWidth = 1
+            systemBrownButton.layer.borderWidth = 0
+            systemMintButton.layer.borderWidth = 0
+            systemCyanButton.layer.borderWidth = 0
+        case 10:
+            systemRedButton.layer.borderWidth = 0
+            systemOrangeButton.layer.borderWidth = 0
+            systemYellowButton.layer.borderWidth = 0
+            systemGreenButton.layer.borderWidth = 0
+            systemTealButton.layer.borderWidth = 0
+            systemBlueButton.layer.borderWidth = 0
+            systemIndigoButton.layer.borderWidth = 0
+            systemPurpleButton.layer.borderWidth = 0
+            systemPinkButton.layer.borderWidth = 0
+            systemBrownButton.layer.borderWidth = 1
+            systemMintButton.layer.borderWidth = 0
+            systemCyanButton.layer.borderWidth = 0
+        case 11:
+            systemRedButton.layer.borderWidth = 0
+            systemOrangeButton.layer.borderWidth = 0
+            systemYellowButton.layer.borderWidth = 0
+            systemGreenButton.layer.borderWidth = 0
+            systemTealButton.layer.borderWidth = 0
+            systemBlueButton.layer.borderWidth = 0
+            systemIndigoButton.layer.borderWidth = 0
+            systemPurpleButton.layer.borderWidth = 0
+            systemPinkButton.layer.borderWidth = 0
+            systemBrownButton.layer.borderWidth = 0
+            systemMintButton.layer.borderWidth = 1
+            systemCyanButton.layer.borderWidth = 0
+        case 12:
+            systemRedButton.layer.borderWidth = 0
+            systemOrangeButton.layer.borderWidth = 0
+            systemYellowButton.layer.borderWidth = 0
+            systemGreenButton.layer.borderWidth = 0
+            systemTealButton.layer.borderWidth = 0
+            systemBlueButton.layer.borderWidth = 0
+            systemIndigoButton.layer.borderWidth = 0
+            systemPurpleButton.layer.borderWidth = 0
+            systemPinkButton.layer.borderWidth = 0
+            systemBrownButton.layer.borderWidth = 0
+            systemMintButton.layer.borderWidth = 0
+            systemCyanButton.layer.borderWidth = 1
+        default: break;
+        }
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Load all elements
         previewColor.layer.cornerRadius = 20
+        colorInfo.layer.cornerRadius = 5
         
         systemRedButton.tag = 1
         systemRedButton.backgroundColor = UIColor.systemRed
         systemRedButton.layer.cornerRadius = 10
+        systemRedButton.layer.borderColor = UIColor.black.cgColor
+
         
         systemOrangeButton.tag = 2
         systemOrangeButton.backgroundColor = UIColor.systemOrange
         systemOrangeButton.layer.cornerRadius = 10
+        systemOrangeButton.layer.borderColor = UIColor.black.cgColor
 
         systemYellowButton.tag = 3
         systemYellowButton.backgroundColor = UIColor.systemYellow
         systemYellowButton.layer.cornerRadius = 10
+        systemYellowButton.layer.borderColor = UIColor.black.cgColor
 
         systemGreenButton.tag = 4
         systemGreenButton.backgroundColor = UIColor.systemGreen
         systemGreenButton.layer.cornerRadius = 10
+        systemGreenButton.layer.borderColor = UIColor.black.cgColor
 
         systemTealButton.tag = 5
         systemTealButton.backgroundColor = UIColor.systemTeal
         systemTealButton.layer.cornerRadius = 10
+        systemTealButton.layer.borderColor = UIColor.black.cgColor
 
         systemBlueButton.tag = 6
         systemBlueButton.backgroundColor = UIColor.systemBlue
         systemBlueButton.layer.cornerRadius = 10
+        systemBlueButton.layer.borderColor = UIColor.black.cgColor
 
         systemIndigoButton.tag = 7
         systemIndigoButton.backgroundColor = UIColor.systemIndigo
         systemIndigoButton.layer.cornerRadius = 10
+        systemIndigoButton.layer.borderColor = UIColor.black.cgColor
 
         systemPurpleButton.tag = 8
         systemPurpleButton.backgroundColor = UIColor.systemPurple
         systemPurpleButton.layer.cornerRadius = 10
+        systemPurpleButton.layer.borderColor = UIColor.black.cgColor
 
         systemPinkButton.tag = 9
         systemPinkButton.backgroundColor = UIColor.systemPink
         systemPinkButton.layer.cornerRadius = 10
+        systemPinkButton.layer.borderColor = UIColor.black.cgColor
 
         systemBrownButton.tag = 10
         systemBrownButton.backgroundColor = UIColor.systemBrown
         systemBrownButton.layer.cornerRadius = 10
+        systemBrownButton.layer.borderColor = UIColor.black.cgColor
 
         systemMintButton.tag = 11
         systemMintButton.backgroundColor = UIColor.systemMint
         systemMintButton.layer.cornerRadius = 10
+        systemMintButton.layer.borderColor = UIColor.black.cgColor
 
         systemCyanButton.tag = 12
         systemCyanButton.backgroundColor = UIColor.systemCyan
         systemCyanButton.layer.cornerRadius = 10
-
+        systemCyanButton.layer.borderColor = UIColor.black.cgColor
 
     }
 }
