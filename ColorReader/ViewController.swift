@@ -324,7 +324,19 @@ class ViewController: UIViewController {
             systemBrownButton.layer.borderWidth = 0
             systemMintButton.layer.borderWidth = 0
             systemCyanButton.layer.borderWidth = 1
-        default: break;
+        default:
+            systemRedButton.layer.borderWidth = 0
+            systemOrangeButton.layer.borderWidth = 0
+            systemYellowButton.layer.borderWidth = 0
+            systemGreenButton.layer.borderWidth = 0
+            systemTealButton.layer.borderWidth = 0
+            systemBlueButton.layer.borderWidth = 0
+            systemIndigoButton.layer.borderWidth = 0
+            systemPurpleButton.layer.borderWidth = 0
+            systemPinkButton.layer.borderWidth = 0
+            systemBrownButton.layer.borderWidth = 0
+            systemMintButton.layer.borderWidth = 0
+            systemCyanButton.layer.borderWidth = 0
         }
     }
     
@@ -410,7 +422,7 @@ extension ViewController: UIColorPickerViewControllerDelegate {
         self.greenNumber.fadeTransition(0.5)
         self.blueNumber.fadeTransition(0.5)
         
-        
+        self.setColorHighlighted(13)
         self.colorName.text = "Custom Color"
         self.previewColor.backgroundColor = viewController.selectedColor
         self.hexNumber.text = viewController.selectedColor.colorHexCode()
@@ -429,6 +441,7 @@ extension ViewController: UIColorPickerViewControllerDelegate {
         self.greenNumber.fadeTransition(0.5)
         self.blueNumber.fadeTransition(0.5)
         
+        self.setColorHighlighted(13)
         self.colorName.text = "Custom Color"
         self.previewColor.backgroundColor = viewController.selectedColor
         self.hexNumber.text = viewController.selectedColor.colorHexCode()
